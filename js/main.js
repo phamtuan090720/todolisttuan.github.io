@@ -10,6 +10,7 @@ getEle("addItem").addEventListener("click", function() {
         var id = Math.random();
         var task = new Task(id, newTask, "todo");
         taskList.addTask(task);
+        alert("Thêm Thành Công");
         resetInput();
     }
     drawList(taskList.arr);
@@ -20,6 +21,7 @@ function deleteTask(id) {
     taskList.deleteTask(id);
     drawList(taskList.arr);
     setlocalstorage();
+    alert("Xóa Thành Công");
 }
 //Update Status
 function ChangeStatusTask(id) {
@@ -33,6 +35,7 @@ function ChangeStatusTask(id) {
     }
     drawList(taskList.arr);
     setlocalstorage();
+    alert("Đổi Status Thành Công");
 }
 // reset value Input
 function resetInput() {
