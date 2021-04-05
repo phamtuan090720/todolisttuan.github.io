@@ -1,5 +1,5 @@
-var validation = new Validation();
 var taskList = new TaskList();
+var validation = new Validation();
 getlocalstorage();
 getEle("addItem").addEventListener("click", function() {
     var newTask = getEle("newTask").value;
