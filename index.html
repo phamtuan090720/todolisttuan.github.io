@@ -9,11 +9,33 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
-    <link rel="icon" href="./img/tasks-solid.svg"/>
+    <link rel="icon" href="./img/tasks-solid.svg" />
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+    <input class="darkmode-checkbox" id="darkMode" type="checkbox">
+    <label for="darkMode">
+      <svg class="darkmode-icon" viewBox="0 0 64 64">
+        <clipPath id="sun">
+          <circle cx="32" cy="32" r="12"/>
+        </clipPath>
+        <circle class="sun" cx="32" cy="32" r="12" />
+        <circle class="moon-shadow" cx="60" cy="32" r="12" clip-path="url(#sun)" />
+        <circle class="sun-stroke" cx="32" cy="32" r="12" />
+        <g>
+        <path class="rays" d="M 32,4 l0,12" />
+        <path class="rays" d="M 32,4 l0,12" transform="rotate(45)" transform-origin="50% 50%" />
+        <path class="rays" d="M 32,4 l0,12" transform="rotate(90)" transform-origin="50% 50%"/>
+        <path class="rays" d="M 32,4 l0,12" transform="rotate(135)" transform-origin="50% 50%"/>
+        <path class="rays" d="M 32,4 l0,12" transform="rotate(180)" transform-origin="50% 50%"/>
+        <path class="rays" d="M 32,4 l0,12" transform="rotate(225)" transform-origin="50% 50%"/>
+        <path class="rays" d="M 32,4 l0,12" transform="rotate(270)" transform-origin="50% 50%"/>
+        <path class="rays" d="M 32,4 l0,12" transform="rotate(315)" transform-origin="50% 50%"/>
+        </g>
+      </svg>
+    </label>
+    </label>
     <div class="card">
         <div class="card__header">
             <img src="./img/X2oObC4.png" />
@@ -23,13 +45,13 @@
             <div class="card__content">
                 <div class="card__title">
                     <h2>My Tasks</h2>
-                    <p>September 9,2020</p>
+                    <p id="date"></p>
                 </div>
                 <div class="card__add">
                     <input id="newTask" type="text" placeholder="Enter an activity..." />
                     <button id="addItem">
-              <i class="fa fa-plus"></i>
-            </button>
+                        <i class="fa fa-plus"></i>
+                    </button>
                 </div>
                 <div id="notiInput" class="alert-danger" style="display: none"></div>
                 <div class="card__todo">
@@ -43,15 +65,16 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
     <script>
-        $(function() {
-            $(".toggle-btn").click(function() {
+        $(function () {
+            $(".toggle-btn").click(function () {
                 $(".filter-btn").toggleClass("open");
             });
 
-            $(".filter-btn a").click(function() {
+            $(".filter-btn a").click(function () {
                 $(".filter-btn").removeClass("open");
             });
         });
