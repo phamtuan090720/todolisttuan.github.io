@@ -9,52 +9,67 @@ body {
     height: 100vh;
     transition: background 400ms ease;
 }
-body.darkmode{
-    background:#161b21;
+
+body.darkmode {
+    background: #161b21;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .darkmode-checkbox {
     display: none;
 }
+
 svg {
     width: 15vmin;
     height: 15vmin;
     position: absolute;
     top: 0;
 }
-.darkmode-icon.moon-shadow{
+
+.darkmode-icon.moon-shadow {
     transition: cx 400ms ease;
 }
-.darkmode-icon.rays{
-    transition: stroke-dashoffset 400ms ease;   
+
+.darkmode-icon.rays {
+    transition: stroke-dashoffset 400ms ease;
     stroke-dashoffset: 24;
     stroke-dasharray: 12;
 }
-.darkmode-icon .sun{
+
+.darkmode-icon .sun {
     fill: #ff7;
 }
+
 .darkmode-icon.moon-shadow {
     fill: black;
 }
-.darkmode-icon .rays, .sun-stroke{
+
+.darkmode-icon .rays,
+.sun-stroke {
     transition: stroke-dashoffset 400ms ease;
     stroke: #777;
     fill: none;
 }
-.darkmode-checkbox:checked ~ label{
+
+.darkmode-checkbox:checked~label {
     cursor: pointer;
 }
-.darkmode-checkbox:checked ~.darkmode-icon.moon-shadow {
+
+.darkmode-checkbox:checked~.darkmode-icon.moon-shadow {
     cx: 40;
 }
+
+
 /* .darkmode-checkbox:checked ~ .rays{
     stroke-dashoffset: 12;
     stroke-dasharray: 12;
 } */
+
 .card {
     margin: 50px auto;
     background-color: #f5f8f9;
@@ -64,6 +79,14 @@ svg {
     overflow: hidden;
     line-height: 2rem;
     letter-spacing: 1px;
+}
+
+.card audio {
+    width: 100%;
+}
+
+.card audio:focus {
+    outline: none;
 }
 
 .card__header {

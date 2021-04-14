@@ -36,6 +36,7 @@
       </svg>
     </label>
     </label>
+
     <div class="card">
         <div class="card__header">
             <img src="./img/X2oObC4.png" />
@@ -63,18 +64,21 @@
                 </div>
             </div>
         </div>
+        <audio controls autoplay>
+            <source src="./mp3/NhacThienTinhTamHoaSenNuocChay-VA-4428738.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
     <script>
-        $(function () {
-            $(".toggle-btn").click(function () {
+        $(function() {
+            $(".toggle-btn").click(function() {
                 $(".filter-btn").toggleClass("open");
             });
 
-            $(".filter-btn a").click(function () {
+            $(".filter-btn a").click(function() {
                 $(".filter-btn").removeClass("open");
             });
         });
